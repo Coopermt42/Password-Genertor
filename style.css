@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0px;
+    height: 100vh;
+    background-color: hsl(0, 0%, 80%);
+    overflow: hidden;
+}
+
+button {
+    width: 100px;
+    height: 75px;
+    border-radius: 15px;
+    border: 0;
+    background-color: rgb(255, 85, 85);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    transition:  1s,  0.4s;
+}
+
+button:hover {
+    background: rgb(255, 246, 246);
+    color: black;
+}
+
+
+#passwords {
+    color: black;
+    margin: 0;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-weight: bold;
+}
