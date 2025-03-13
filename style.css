@@ -1,36 +1,45 @@
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0px;
     height: 100vh;
-    background-color: hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 95%);
+}
+
+.display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+
+#calculator {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
     overflow: hidden;
+}
+
+#keys {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+   padding: 25px;
 }
 
 button {
     width: 100px;
-    height: 75px;
-    border-radius: 15px;
-    border: 0;
-    background-color: rgb(255, 85, 85);
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
     color: white;
-    transition:  1s,  0.4s;
-}
-
-button:hover {
-    background: rgb(255, 246, 246);
-    color: black;
-}
-
-
-#passwords {
-    color: black;
-    margin: 0;
-    background-color: whitesmoke;
-    border-radius: 5px;
+    font-size: 3rem;
     font-weight: bold;
+    cursor: pointer;
 }
