@@ -1,17 +1,20 @@
-const display = document.getElementById('display');
-
-function showOnDisplay(letter) {
-    display.value += letter;
+function generatePassword(length = 12) {
+    let password = '';
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+    for (let i = 0; i < length; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return password
 }
 
-function clearDisplay() {
-    display.value = '';
-}
+function saveAndShowPassword() {
+    let name = document.getElementById('passwordName');
+    if (!name.value) return alert("Enter a name for your password!")
 
-function calculate() {
-    display.value = eval(display.value);
-}
+    let password = generatePassword();
+    localStorage.setItem(name.value, password);
 
-function backspace() {
-    display.value = display.value.slice(0, -1);
+    let newElement = document.createElement('p');
+    newElement.textContent = `Saved: ${name.value} - ${password}`;
+    document.body.appendChild(newElement);
 }
